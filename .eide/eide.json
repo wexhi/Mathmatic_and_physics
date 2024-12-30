@@ -6,7 +6,8 @@
     "Core",
     "Drivers",
     "Application",
-    "Module"
+    "Module",
+    "BSP"
   ],
   "virtualFolder": {
     "name": "<virtual_root>",
@@ -31,7 +32,9 @@
   },
   "targets": {
     "Debug": {
-      "excludeList": [],
+      "excludeList": [
+        "Module/LCD/lcd_ex.c"
+      ],
       "toolchain": "GCC",
       "compileConfig": {
         "cpuType": "Cortex-M3",
@@ -73,7 +76,9 @@
           "Drivers/CMSIS/Device/ST/STM32F1xx/Include",
           "Drivers/CMSIS/Include",
           "Application",
-          "Module/MQ2"
+          "Module/MQ2",
+          "Module/LCD",
+          "BSP/DWT"
         ],
         "libList": [],
         "defineList": [
